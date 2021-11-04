@@ -15,11 +15,31 @@ class Paciente {
 class Medico {
 - numeroDeMatricula: String
 - nombre: String
-
+- importeBasico:  double
++ cobrar(): double
 }
 
-class Especialidad {
+class Cardiologo {
 
++cobrar(): double
 }
+class Cirujano {
++cobrar(): double
+}
+
+class Dermatologo {
++cobrar(): double
+}
+class Generalista {
++cobrar(): double
+}
+
+
+Paciente *-right- Medico : -especialista
+Cardiologo  --|> Medico
+Cirujano  --|> Medico
+Dermatologo --|> Medico
+Generalista --|> Medico
+
 
 @enduml
