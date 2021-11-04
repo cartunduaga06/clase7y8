@@ -11,11 +11,11 @@ class Paciente {
 - cirugia: boolean
 - alta: boolean
 }
-
+package Medico {
 class Medico {
 - numeroDeMatricula: String
 - nombre: String
-- importeBasico:  double
+# importeBasico:  double
 + cobrar(): double
 }
 
@@ -32,6 +32,7 @@ class Dermatologo {
 }
 class Generalista {
 +cobrar(): double
+}
 }
 
 
