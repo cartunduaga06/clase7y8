@@ -1,0 +1,37 @@
+@startuml
+
+class Comercio {
+- nombre: String
++ Comercio (nombre: String)
+
+
+}
+
+class Cliente {
+-  nombre: String
+- telefono: String
+- domicilio: String
++ Cliente( String nombre, String telefono , String domicilio , pedidos Pedido): void
+}
+
+class Pedido {
+- fecha de pedido: String
+- codigo: int
+- datosCliente: Cliente
++agregarArticulo(Articulo articulo): void
+
+}
+
+class Articulo {
+- nombre: String
+- precio: int
+}
+
+
+Comercio *-- "*" Cliente : -clientes
+Cliente *--"*" Pedido : - pedidos
+Pedido o--"*" Articulo:  - articulos
+
+
+
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+
+class Editorial {
+
+- nombre: String
+}
+
+class Revista {
+-nombre: String
+-codigo String
+-periodicidad String
+
+}
+
+class Ediciones {
+- numero: int
+- fecha: String
+- precio: int
+
+}
+
+class Articulos {
+- titulo: String
+- tema: String
+- autor: String
+- fecha: String
+
+}
+
+Editorial *-- "*" Revista
+Revista *-- "*" Ediciones
+Ediciones *-- "*" Articulos
+
+
+@enduml
+
+Una editorial produce una serie de revistas periodísticas. Cada revista tiene un nombre, un
+código, periodicidad (semanal o mensual). Las revistas tienen muchas ediciones en las
+ediciones tenemos: número de edición, fecha de edición y precio. En cada edición aparecen
+una serie de artículos, cada uno con su título, tema, autor, fecha del artículo.

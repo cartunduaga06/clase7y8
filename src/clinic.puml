@@ -1,0 +1,25 @@
+@startuml
+
+class Paciente {
+- numeroDeDocumento: String
+- nombre: String
+- edad: int
+- nombreDeObraSocial: String
+- particular: boolean
+- medicoEspecialista: Medico
+- cantidadDeEstudios: int
+- cirugia: boolean
+- alta: boolean
+}
+
+class Medico {
+- numeroDeMatricula: String
+- nombre: String
+
+}
+
+class Especialidad {
+
+}
+
+@enduml
